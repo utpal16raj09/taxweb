@@ -503,124 +503,171 @@
                 grid.style.display = "grid";
             });
         </script>
-        <section id="contact" class="content-section contact-section">
+
+        <section id="contact" class="contact-section">
             <div class="container">
-                <h2 class="section-title">Contact Us</h2>
-                <p class="contact-intro">Have questions or need assistance? We’re here to help. Fill out the form below
-                    and our team will respond promptly.</p>
+                <div class="contact-wrapper">
 
-                <form class="contact-form" onsubmit="return validateForm()">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    <!-- Left: Form -->
+                    <div class="contact-form-box">
+                        <h2 class="contact-title">Request A Call</h2>
+                        <div class="title-underline"></div>
+
+                        <form id="contact-form" class="contact-form" onsubmit="return validateForm()">
+                            <div class="form-row">
+                                <input type="text" id="name" name="name" placeholder="Your Name *" required>
+                                <input type="email" id="email" name="email" placeholder="Your Mail *" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="tel" id="phone" name="phone" placeholder="Phone *" required>
+                                <input type="text" id="subject" name="subject" placeholder="Subject">
+                            </div>
+                            <textarea id="message" name="message" rows="4" placeholder="Your Message.... *"
+                                required></textarea>
+                            <button type="submit" class="submit-btn">SUBMIT</button>
+                        </form>
                     </div>
 
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <!-- Right: Contact Info -->
+                    <div class="contact-info-box">
+                        <h2 class="contact-title">Reach Us</h2>
+                        <div class="title-underline"></div>
+
+                        <div class="info-item">
+                            <i class="fa fa-phone"></i>
+                            <a href="tel:6105084455">610-508-4455</a>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa fa-envelope"></i>
+                            <a href="mailto:support@vtaxfiling.com">support@vtaxfiling.com</a>
+                        </div>
+                        <div class="info-item address">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <p>55 N Calder Way,<br>Phoenixville, PA - 19460</p>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..."
-                            required></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+                </div>
             </div>
         </section>
+
         <script>
             function validateForm() {
                 const name = document.getElementById("name").value.trim();
                 const email = document.getElementById("email").value.trim();
+                const phone = document.getElementById("phone").value.trim();
                 const message = document.getElementById("message").value.trim();
 
-                if (!name || !email || !message) {
+                if (!name || !email || !phone || !message) {
                     alert("Please fill in all required fields before submitting.");
                     return false;
                 }
 
-                alert("Thank you for reaching out! We'll contact you soon.");
-                return true;
+                alert("Thank you for contacting V Tax Filing! We’ll reach out shortly.");
+                document.getElementById("contact-form").reset();
+                return false; // Prevent actual submission for now
             }
         </script>
 
 
+<section id="cta" class="cta-section">
+  <div class="container">
+    <h2 class="text-center">File Your Taxes in Just 3 Simple Steps</h2>
+  </div>
+</section>
 
-        <section id="cta">
-            <div class="container">
-                <h2>File your Taxes in Just 3 Simple Steps</h2>
-                <a href="#" class="btn btn-primary-light">Register Online</a>
-            </div>
-        </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-col footer-about">
-                <img src="images/logo.png" alt="V Tax Filing Logo" class="footer-logo">
-                <p>V Tax Filing is a firm of U.S. tax and accounting needs. We are one of the leading firms in the area,
-                    providing unmatched expertise and service.</p>
-                <div class="footer-contact">
-                    <p><i class="fa fa-map-marker-alt"></i> 123 Tax Ave, Philadelphia, PA - 19103</p>
-                    <p><i class="fa fa-phone"></i> +1 (123) 456-7890</p>
-                    <p><i class="fa fa-envelope"></i> support@vtaxfiling.com</p>
-                </div>
-            </div>
-            <div class="footer-col footer-links">
-                <h4>Useful Links</h4>
-                <ul>
-                    <li><a href="#">Our Vision</a></li>
-                    <li><a href="#">Security Strength</a></li>
-                    <li><a href="#">Referral Policy</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-col footer-services">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#">Tax Planning (Free)</a></li>
-                    <li><a href="#">Tax Return Review (Free)</a></li>
-                    <li><a href="#">IRS AUDIT Representation</a></li>
-                    <li><a href="#">FBAR Filing (Free)</a></li>
-                    <li><a href="#">ITIN Application</a></li>
-                    <li><a href="#">FBAR/FATCA Processing</a></li>
-                </ul>
-            </div>
-            <div class="footer-col footer-newsletter">
-                <h4>Newsletter</h4>
-                <p>Get weekly tax tips and news updates straight to your inbox.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i></button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 V Tax Filing. All rights reserved.</p>
-            <div class="payment-icons">
-                <i class="fab fa-cc-visa"></i>
-                <i class="fab fa-cc-mastercard"></i>
-                <i class="fab fa-cc-paypal"></i>
-                <i class="fab fa-cc-stripe"></i>
-            </div>
-        </div>
-    </footer>
+   <footer>
+  <div class="container">
+    <div class="footer-col footer-about">
+      <img src="images/logo.png" alt="V Tax Filing Logo" class="footer-logo">
+      <p>V Tax Filing is a firm of U.S. tax and accounting needs. We are one of the leading firms in the area,
+        providing unmatched expertise and service.</p>
+      <div class="footer-contact">
+        <p><i class="fa fa-map-marker-alt"></i> 123 Tax Ave, Philadelphia, PA - 19103</p>
+        <p><i class="fa fa-phone"></i> +1 (123) 456-7890</p>
+        <p><i class="fa fa-envelope"></i> support@vtaxfiling.com</p>
+      </div>
+    </div>
+
+    <div class="footer-col footer-links">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#">Our Vision</a></li>
+        <li><a href="#">Security Strength</a></li>
+        <li><a href="#">Referral Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-services">
+      <h4>Services</h4>
+      <ul id="footer-services" class="footer-services-grid">
+        <li><a href="#services" data-service="tax-planning">Tax Planning (Free)</a></li>
+        <li><a href="#services" data-service="tax-review">Tax Return Review (Free)</a></li>
+        <li><a href="#services" data-service="irs-audit">IRS Audit Representation</a></li>
+        <li><a href="#services" data-service="itin">ITIN Application</a></li>
+        <li><a href="#services" data-service="fbar">FBAR/FATCA Processing</a></li>
+        <li><a href="#services" data-service="business-tax">Business Tax Services</a></li>
+        <li><a href="#services" data-service="payroll">Payroll Services</a></li>
+        <li><a href="#services" data-service="financial-consulting">Financial Consulting</a></li>
+        <li><a href="#services" data-service="investment-planning">Investment Tax Planning</a></li>
+        <li><a href="#services" data-service="estate-tax">Estate & Trust Tax Services</a></li>
+        <li><a href="#services" data-service="remote-filing">Remote Filing Assistance</a></li>
+        <li><a href="#services" data-service="education">Tax Education & Workshops</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get weekly tax tips and news updates straight to your inbox.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 V Tax Filing. All rights reserved.</p>
+    <div class="payment-icons">
+      <i class="fab fa-cc-visa"></i>
+      <i class="fab fa-cc-mastercard"></i>
+      <i class="fab fa-cc-paypal"></i>
+      <i class="fab fa-cc-stripe"></i>
+    </div>
+  </div>
+</footer>
+
+    <script>
+        // Footer service link handler
+        document.querySelectorAll('#footer-services a').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+
+                const serviceKey = e.target.getAttribute('data-service');
+                const info = serviceDetails[serviceKey]; // uses the same object you already have
+
+                if (!info) return;
+
+                // Scroll to services section
+                document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+
+                // Replace service grid with detail view
+                document.getElementById('services-grid').style.display = 'none';
+                const detail = document.getElementById('service-detail');
+                const detailContent = document.getElementById('detail-content');
+
+                detail.style.display = 'block';
+                detailContent.innerHTML = `<h3>${info.title}</h3>${info.content}`;
+            });
+        });
+    </script>
+
 
     <script src="script.js"></script>
 </body>
 
 </html>
-
