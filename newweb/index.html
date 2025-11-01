@@ -25,7 +25,6 @@
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-whatsapp"></i></a>
                 </div>
-                <a href="#" class="btn-login">Login / Register</a>
             </div>
         </div>
         <nav class="main-nav">
@@ -35,10 +34,9 @@
                 </a>
                 <ul class="nav-menu">
                     <li><a href="#hero" class="nav-link active">Home</a></li>
-                    <li><a href="#values-content" class="nav-link">About Us</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
                     <li><a href="#how-it-works" class="nav-link">Process</a></li>
-                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#values-content" class="nav-link">About Us</a></li>
                     <li><a href="#contact" class="nav-link">Contact Us</a></li>
                 </ul>
                 <div class="hamburger">
@@ -70,7 +68,6 @@
                         <li class="active"><a href="#" data-target="values">Our Values</a></li>
                         <li><a href="#" data-target="vision">Our Vision</a></li>
                         <li><a href="#" data-target="security">Security Strength</a></li>
-                        <li><a href="#" data-target="career">Career Opportunity</a></li>
                         <li><a href="#" data-target="referral">Referral Policy</a></li>
                         <li><a href="#" data-target="privacy">Privacy Policy</a></li>
                     </ul>
@@ -169,16 +166,6 @@
                         <img src="images/security.png" alt="Security Strength">
                     </div>
 
-                    <div id="career" class="content-panel">
-                        <h3><i class="fa fa-users"></i> Career Opportunity</h3>
-                        <p>Join a team of innovators and experts. We believe in fostering a culture of growth, learning,
-                            and collaboration. We offer competitive benefits, flexible work arrangements, and a clear
-                            path for professional development. If you are passionate about finance and technology, check
-                            our open positions.</p>
-                        <a href="#" class="btn btn-primary-vision">View Open Positions</a>
-                        <img src="images/career.png" alt="Career Opportunity" style="margin-top: 20px;">
-                    </div>
-
                     <div id="referral" class="content-panel">
                         <h3><i class="fa fa-gift"></i> Referral Policy</h3>
                         <p>We grow through word of mouth, and we love to reward our clients. For every new client you
@@ -202,77 +189,375 @@
 
         <section id="how-it-works" class="content-section bg-light">
             <div class="container">
-                <h2 class="section-title">File Your Taxes in 4 Simple Steps</h2>
+                <h2 class="section-title">File Your Taxes in 3 Simple Steps</h2>
                 <div class="steps-grid">
+
+                    <!-- Step 1 -->
                     <div class="step-card fade-in">
-                        <div class="step-icon"><i class="fa fa-user-plus"></i></div>
-                        <h3>1. Register</h3>
-                        <p>Create a secure account on our platform in minutes.</p>
+                        <div class="step-icon"><i class="fa fa-play-circle"></i></div>
+                        <h3>1. Get Started</h3>
+                        <p>Provide your basic information so we can match you with the right tax expert who understands
+                            your needs.</p>
                     </div>
+
+                    <!-- Step 2 -->
                     <div class="step-card fade-in">
-                        <div class="step-icon"><i class="fa fa-upload"></i></div>
-                        <h3>2. Upload Documents</h3>
-                        <p>Securely upload your tax documents. We accept all common formats.</p>
+                        <div class="step-icon"><i class="fa fa-info-circle"></i></div>
+                        <h3>2. Share Your Details</h3>
+                        <p>Tell us a bit about your financial situation — we’ll guide you through the next steps with
+                            personalized assistance and document guidance.</p>
                     </div>
+
+                    <!-- Step 3 -->
                     <div class="step-card fade-in">
                         <div class="step-icon"><i class="fa fa-calculator"></i></div>
-                        <h3>3. We Prepare</h3>
-                        <p>Our experts review your documents and prepare your tax return.</p>
+                        <h3>3. Start Your Filing</h3>
+                        <p>Begin your tax filing process instantly — no complex registration required. Our experts will
+                            take care of everything from here.</p>
                     </div>
-                    <div class="step-card fade-in">
-                        <div class="step-icon"><i class="fa fa-file-signature"></i></div>
-                        <h3>4. Review & E-File</h3>
-                        <p>Review your prepared return, sign digitally, and we'll e-file for you.</p>
-                    </div>
+
                 </div>
             </div>
         </section>
+
 
         <section id="services" class="content-section">
             <div class="container">
                 <h2 class="section-title">Our Services</h2>
-                <div class="services-grid">
-                    <div class="service-card fade-in">
+
+                <!-- Service Grid -->
+                <div id="services-grid" class="services-grid">
+
+                    <div class="service-card fade-in" data-service="tax-planning">
                         <i class="fa fa-calculator"></i>
                         <h3>Tax Planning (Free)</h3>
-                        <p>Proactive strategies to minimize your future tax liability.</p>
+                        <p>Proactive strategies to minimize your tax liability and maximize savings.</p>
                         <a href="#" class="read-more">Learn More <i class="fa fa-arrow-right"></i></a>
                     </div>
-                    <div class="service-card fade-in">
+
+                    <div class="service-card fade-in" data-service="tax-review">
                         <i class="fa fa-file-invoice-dollar"></i>
                         <h3>Tax Return Review (Free)</h3>
-                        <p>Let our experts review your past returns for errors and missed savings.</p>
+                        <p>Identify missed deductions and correct past filing errors to recover savings.</p>
                         <a href="#" class="read-more">Learn More <i class="fa fa-arrow-right"></i></a>
                     </div>
-                    <div class="service-card fade-in">
+
+                    <div class="service-card fade-in" data-service="irs-audit">
                         <i class="fa fa-gavel"></i>
                         <h3>IRS Audit Representation</h3>
-                        <p>Never face the IRS alone. We represent you and protect your rights.</p>
+                        <p>Experienced representation to ensure your rights and interests are protected.</p>
                         <a href="#" class="read-more">Learn More <i class="fa fa-arrow-right"></i></a>
                     </div>
-                    <div class="service-card fade-in">
+
+                    <div class="service-card fade-in" data-service="itin">
                         <i class="fa fa-id-card"></i>
                         <h3>ITIN Application</h3>
-                        <p>We guide you through the process of obtaining an Individual Taxpayer ID Number.</p>
+                        <p>Guidance and documentation support for obtaining your Individual Taxpayer ID Number.</p>
                         <a href="#" class="read-more">Learn More <i class="fa fa-arrow-right"></i></a>
                     </div>
-                    <div class="service-card fade-in">
+
+                    <div class="service-card fade-in" data-service="fbar">
                         <i class="fa fa-globe-americas"></i>
                         <h3>FBAR/FATCA Processing</h3>
-                        <p>Expert handling of foreign bank account reporting to ensure compliance.</p>
+                        <p>Ensure full compliance with U.S. foreign account reporting regulations.</p>
                         <a href="#" class="read-more">Learn More <i class="fa fa-arrow-right"></i></a>
                     </div>
-                    <div class="service-card fade-in">
+
+                    <div class="service-card fade-in" data-service="business-tax">
                         <i class="fa fa-briefcase"></i>
                         <h3>Business Tax Services</h3>
-                        <p>From startups to established corporations, we handle all your business tax needs.</p>
+                        <p>Comprehensive solutions to manage corporate and small business tax obligations.</p>
                         <a href="#" class="read-more">Learn More <i class="fa fa-arrow-right"></i></a>
                     </div>
+
+                    <div class="service-card fade-in" data-service="payroll">
+                        <i class="fa fa-users"></i>
+                        <h3>Payroll Services</h3>
+                        <p>Streamlined payroll management and compliance for businesses of all sizes.</p>
+                        <a href="#" class="read-more">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card fade-in" data-service="financial-consulting">
+                        <i class="fa fa-chart-line"></i>
+                        <h3>Financial Consulting</h3>
+                        <p>Professional financial analysis and advisory services for sustained growth.</p>
+                        <a href="#" class="read-more">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card fade-in" data-service="investment-planning">
+                        <i class="fa fa-hand-holding-usd"></i>
+                        <h3>Investment Tax Planning</h3>
+                        <p>Strategic planning to maximize returns and minimize tax exposure.</p>
+                        <a href="#" class="read-more">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card fade-in" data-service="estate-tax">
+                        <i class="fa fa-user-shield"></i>
+                        <h3>Estate & Trust Tax Services</h3>
+                        <p>Protect your estate and ensure compliance with all trust-related tax requirements.</p>
+                        <a href="#" class="read-more">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card fade-in" data-service="remote-filing">
+                        <i class="fa fa-laptop-house"></i>
+                        <h3>Remote Filing Assistance</h3>
+                        <p>Secure and convenient virtual tax filing with expert online assistance.</p>
+                        <a href="#" class="read-more">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card fade-in" data-service="education">
+                        <i class="fa fa-book-reader"></i>
+                        <h3>Tax Education & Workshops</h3>
+                        <p>Comprehensive learning programs to understand evolving tax laws and compliance.</p>
+                        <a href="#" class="read-more">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+
+                </div>
+
+                <!-- Detail Section -->
+                <div id="service-detail" class="service-detail" style="display:none;">
+                    <button id="back-btn" class="back-btn"><i class="fa fa-arrow-left"></i> Back to Services</button>
+                    <div id="detail-content"></div>
                 </div>
             </div>
         </section>
 
-       
+        <script>
+            const serviceDetails = {
+                "tax-planning": {
+                    title: "Tax Planning (Free)",
+                    content: `
+      <p>Planning is the key to successfully and legally reducing your tax liability. We go beyond tax compliance and proactively recommend tax-saving strategies that maximize your after-tax income. Our firm continually enhances its expertise through frequent tax seminars and analysis of new regulations.</p>
+      <p>We ensure that both individuals and businesses pay the lowest tax allowable by law. Our experts monitor opportunities throughout the year to minimize liability, rather than just at year-end. By working with us, clients gain a partner who is dedicated to preserving wealth, optimizing returns, and maintaining compliance.</p>
+      <h4>Key Benefits:</h4>
+      <ul>
+        <li>Comprehensive, year-round tax strategy development</li>
+        <li>Reduced liability through income and expense optimization</li>
+        <li>Maximized deductions via legal and ethical planning</li>
+      </ul>`
+                },
+
+                "tax-review": {
+                    title: "Tax Return Review (Free)",
+                    content: `
+      <p>Our Tax Return Review service provides a meticulous evaluation of your previously filed returns. We identify any overlooked deductions, potential errors, or credits that could result in significant savings or even refunds. Every review is handled confidentially and professionally by our experienced tax specialists.</p>
+      <p>We also provide recommendations for amendments when necessary and assist with future tax planning based on the findings. By ensuring the accuracy and completeness of your returns, we help safeguard your compliance while maximizing your financial benefit.</p>
+      <h4>Key Benefits:</h4>
+      <ul>
+        <li>Detection of filing errors and missed opportunities</li>
+        <li>Identification of overlooked deductions or credits</li>
+        <li>Enhanced compliance and audit readiness</li>
+      </ul>`
+                },
+
+                "irs-audit": {
+                    title: "IRS Audit Representation",
+                    content: `
+      <p>Facing an IRS audit can be daunting. Our firm provides full representation throughout the audit process, ensuring that your rights are protected and your case is managed professionally. We prepare all necessary documentation, communicate directly with the IRS, and advocate on your behalf.</p>
+      <p>With years of experience in audit negotiation and resolution, our team minimizes potential liabilities and ensures full compliance with federal requirements. You can focus on your personal or business activities while we manage the complexities of your audit.</p>
+      <h4>Key Benefits:</h4>
+      <ul>
+        <li>Professional representation during all IRS interactions</li>
+        <li>Thorough documentation and compliance preparation</li>
+        <li>Reduced audit stress and potential penalties</li>
+      </ul>`
+                },
+
+                "itin": {
+                    title: "ITIN Application",
+                    content: `
+      <p>Obtaining an Individual Taxpayer Identification Number (ITIN) can be complex for non-U.S. residents. Our ITIN Application service provides step-by-step assistance, ensuring your application is accurate, complete, and accepted promptly by the IRS.</p>
+      <p>We assist with documentation verification, form preparation, and follow-up communication. Whether you need an ITIN for tax filing, investment, or bank account setup, our experts ensure a smooth and compliant process.</p>
+      <h4>Key Benefits:</h4>
+      <ul>
+        <li>Certified ITIN assistance by IRS-authorized agents</li>
+        <li>End-to-end document verification and filing</li>
+        <li>Faster and error-free ITIN approval</li>
+      </ul>`
+                },
+
+                "fbar": {
+                    title: "FBAR/FATCA Processing",
+                    content: `
+      <p>Foreign Bank Account Reporting (FBAR) and FATCA compliance are essential for individuals and businesses with offshore assets. We specialize in accurate reporting and filing that aligns with all federal requirements, minimizing exposure to penalties.</p>
+      <p>Our team evaluates your financial accounts, identifies reportable holdings, and ensures timely submission of necessary forms. We provide ongoing compliance support to help clients navigate cross-border reporting complexities with confidence.</p>
+      <h4>Key Benefits:</h4>
+      <ul>
+        <li>Comprehensive foreign asset review and compliance</li>
+        <li>Penalty risk mitigation through accurate reporting</li>
+        <li>Confidential handling of sensitive financial data</li>
+      </ul>`
+                },
+
+                "business-tax": {
+                    title: "Business Tax Services",
+                    content: `
+      <p>Our Business Tax Services cater to companies of all sizes, from emerging startups to established corporations. We offer complete support—from tax registration and filing to strategic consulting—to help your business remain compliant and financially efficient.</p>
+      <p>We stay abreast of changing tax laws affecting various industries, ensuring our clients capitalize on every available deduction and credit. Our services extend to bookkeeping, corporate structuring, and year-round advisory for sustainable financial success.</p>
+      <h4>Key Benefits:</h4>
+      <ul>
+        <li>Comprehensive tax compliance and preparation</li>
+        <li>Tailored strategies for corporate tax efficiency</li>
+        <li>End-to-end business accounting and filing support</li>
+      </ul>`
+                },
+
+                "payroll": {
+                    title: "Payroll Services",
+                    content: `
+      <p>Efficient payroll processing is vital to maintaining employee satisfaction and compliance. Our Payroll Services ensure timely, accurate, and legally compliant payment management for your organization.</p>
+      <p>We manage salary calculations, tax withholdings, statutory deductions, and regulatory filings while maintaining strict confidentiality. Businesses trust us to handle payroll seamlessly so they can focus on their core operations.</p>
+      <h4>Key Benefits:</h4>
+      <ul>
+        <li>Accurate payroll processing and compliance</li>
+        <li>On-time filing of statutory returns and deductions</li>
+        <li>Reduced administrative workload for HR teams</li>
+      </ul>`
+                },
+
+                "financial-consulting": {
+                    title: "Financial Consulting",
+                    content: `
+      <p>Our Financial Consulting services provide data-driven insights and expert guidance to strengthen your financial stability and strategic planning. We analyze your current financial position and develop tailored plans for optimization and growth.</p>
+      <p>Whether you are an individual seeking investment direction or a business aiming to streamline operations, we deliver actionable solutions for sustainable profitability and long-term success.</p>
+      <h4>Key Benefits:</h4>
+      <ul>
+        <li>Custom financial strategy development</li>
+        <li>Comprehensive budgeting and forecasting</li>
+        <li>Improved profitability through actionable insights</li>
+      </ul>`
+                },
+
+                "investment-planning": {
+                    title: "Investment Tax Planning",
+                    content: `
+      <p>We help clients make informed investment decisions by evaluating tax implications across all asset classes. Our advisors craft strategies that balance growth potential with tax efficiency, ensuring optimal returns.</p>
+      <p>By integrating investment objectives with tax planning, we minimize capital gains exposure and identify tax-deferred opportunities aligned with your financial goals.</p>
+      <h4>Key Benefits:</h4>
+      <ul>
+        <li>Tax-efficient investment portfolio structuring</li>
+        <li>Capital gains reduction strategies</li>
+        <li>Integrated wealth and tax management</li>
+      </ul>`
+                },
+
+                "estate-tax": {
+                    title: "Estate & Trust Tax Services",
+                    content: `
+      <p>Estate and trust tax management requires precision and foresight. Our team assists in structuring estates to reduce liabilities while ensuring compliance with evolving tax regulations.</p>
+      <p>We coordinate with legal advisors and beneficiaries to design efficient estate plans that preserve wealth across generations and minimize administrative burdens.</p>
+      <h4>Key Benefits:</h4>
+      <ul>
+        <li>Comprehensive estate and trust tax compliance</li>
+        <li>Wealth transfer and inheritance optimization</li>
+        <li>Reduced estate taxes through strategic structuring</li>
+      </ul>`
+                },
+
+                "remote-filing": {
+                    title: "Remote Filing Assistance",
+                    content: `
+      <p>Our Remote Filing Assistance allows clients to complete tax submissions from anywhere, securely and efficiently. With encrypted document upload and virtual consultations, we make tax filing convenient and fully digital.</p>
+      <p>From initial consultation to final submission, every step is handled with precision and privacy. Whether for individuals or businesses, our experts simplify the filing process without compromising quality.</p>
+      <h4>Key Benefits:</h4>
+      <ul>
+        <li>Fully virtual, secure filing process</li>
+        <li>Personalized online consultations</li>
+        <li>Faster turnaround and paperless convenience</li>
+      </ul>`
+                },
+
+                "education": {
+                    title: "Tax Education & Workshops",
+                    content: `
+      <p>We believe informed clients make smarter financial decisions. Our Tax Education and Workshop programs are designed to help individuals and businesses stay ahead of regulatory changes and understand their tax responsibilities.</p>
+      <p>Through interactive training sessions, webinars, and professional development seminars, participants gain valuable insights into compliance strategies and best practices for efficient tax management.</p>
+      <h4>Key Benefits:</h4>
+      <ul>
+        <li>Expert-led workshops and seminars</li>
+        <li>Practical understanding of tax law updates</li>
+        <li>Enhanced decision-making confidence</li>
+      </ul>`
+                }
+            };
+
+            const grid = document.getElementById("services-grid");
+            const detail = document.getElementById("service-detail");
+            const backBtn = document.getElementById("back-btn");
+            const detailContent = document.getElementById("detail-content");
+
+            document.querySelectorAll(".read-more").forEach(link => {
+                link.addEventListener("click", e => {
+                    e.preventDefault();
+                    const key = e.target.closest(".service-card").dataset.service;
+                    const info = serviceDetails[key];
+                    if (!info) return;
+                    grid.style.display = "none";
+                    detail.style.display = "block";
+                    detailContent.innerHTML = `<h3>${info.title}</h3>${info.content}`;
+                });
+            });
+
+            backBtn.addEventListener("click", () => {
+                detail.style.display = "none";
+                grid.style.display = "grid";
+            });
+        </script>
+        <section id="contact" class="content-section contact-section">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="contact-intro">Have questions or need assistance? We’re here to help. Fill out the form below
+                    and our team will respond promptly.</p>
+
+                <form class="contact-form" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+        <script>
+            function validateForm() {
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const message = document.getElementById("message").value.trim();
+
+                if (!name || !email || !message) {
+                    alert("Please fill in all required fields before submitting.");
+                    return false;
+                }
+
+                alert("Thank you for reaching out! We'll contact you soon.");
+                return true;
+            }
+        </script>
+
+
+
         <section id="cta">
             <div class="container">
                 <h2>File your Taxes in Just 4 Simple Steps</h2>
@@ -298,7 +583,6 @@
                 <ul>
                     <li><a href="#">Our Vision</a></li>
                     <li><a href="#">Security Strength</a></li>
-                    <li><a href="#">Career Opportunity</a></li>
                     <li><a href="#">Referral Policy</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Contact Us</a></li>
@@ -339,4 +623,3 @@
 </body>
 
 </html>
-
