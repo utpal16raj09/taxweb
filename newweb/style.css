@@ -214,13 +214,14 @@ h3 {
     background-color: transparent;
     color: var(--primary-color);
 }
+
 .btn-primary-vision {
-  display: block;
-  margin: 0 auto;
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  border: 2px solid var(--primary-color);
-  text-align: center;
+    display: block;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: 2px solid var(--primary-color);
+    text-align: center;
 }
 
 .btn-secondary {
@@ -434,24 +435,29 @@ h3 {
 
 /* --- New Content Panel Styles --- */
 .content-panel {
-    display: none; /* Hide all panels by default */
-    text-align: center; /* Centers all text and inline elements */
+    display: none;
+    /* Hide all panels by default */
+    text-align: center;
+    /* Centers all text and inline elements */
 }
 
 .content-panel.active {
-    display: block; /* Show the active panel */
+    display: block;
+    /* Show the active panel */
 }
 
 /* Centered headings with icons */
 .content-panel h3 {
-  display: inline-flex;           /* keeps both icon & text tightly grouped */
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  text-align: center;
-  font-size: 1.8rem;
-  color: var(--primary-color);
-  margin: 0 auto 20px auto;       /* ensures horizontal centering */
+    display: inline-flex;
+    /* keeps both icon & text tightly grouped */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 0 auto 20px auto;
+    /* ensures horizontal centering */
 }
 
 /* Icon style inside headings */
@@ -470,8 +476,10 @@ h3 {
 /* Centered images with nice visuals */
 .content-panel img {
     display: block;
-    margin: 20px auto; /* centers horizontally */
-    width: 80%; /* adjust if needed */
+    margin: 20px auto;
+    /* centers horizontally */
+    width: 80%;
+    /* adjust if needed */
     max-width: 600px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -529,8 +537,10 @@ h3 {
 
 .values-text-content {
     display: flex;
-    flex-direction: column; /* stack items vertically */
-    gap: 40px; /* space between each value */
+    flex-direction: column;
+    /* stack items vertically */
+    gap: 40px;
+    /* space between each value */
 }
 
 .value-item {
@@ -563,7 +573,8 @@ h3 {
     font-size: 1.05rem;
     line-height: 1.7;
     max-width: 900px;
-    margin: 0 auto; /* keeps it centered in layout, text still left-aligned */
+    margin: 0 auto;
+    /* keeps it centered in layout, text still left-aligned */
 }
 
 
@@ -574,7 +585,7 @@ h3 {
 /* ======== HOW IT WORKS SECTION ======== */
 .steps-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
@@ -953,4 +964,115 @@ footer .container {
         display: none;
         /* Hide icons in text-center layout */
     }
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: #c96005;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.back-btn i {
+    margin-right: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-detail {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.service-detail ul {
+    list-style-type: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+    line-height: 1.7;
+}
+
+.service-detail li {
+    margin-bottom: 5px;
+}
+
+.contact-section {
+    background: #f8f9fa;
+    padding: 60px 20px;
+    border-top: 2px solid #e9ecef;
+}
+
+.contact-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #F05E23;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    background-color: #F05E23;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #F05E23;
 }
