@@ -528,15 +528,44 @@ h3 {
 }
 
 .values-text-content {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    display: flex;
+    flex-direction: column; /* stack items vertically */
+    gap: 40px; /* space between each value */
 }
 
-.value-item h3 {
-    color: var(--primary-color);
+.value-item {
+    width: 100%;
+    padding: 20px 0;
 }
+
+/* Center the heading + icon */
+.value-item h3 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Style the icon nicely */
+.value-item h3 i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* Left-align the paragraph text */
+.value-item p {
+    text-align: left;
+    color: var(--text-color);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 0 auto; /* keeps it centered in layout, text still left-aligned */
+}
+
 
 .value-item i {
     margin-right: 8px;
