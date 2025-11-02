@@ -3,8 +3,8 @@
 
 /* ======== CSS VARIABLES (COLOR PALETTE) ======== */
 :root {
-    --primary-color: #4b5c09;
-    --dark-color: #121212;
+    --primary-color: #F05E23;
+    --dark-color: #22252A;
     --secondary-dark: #333;
     --light-color: #f4f4f4;
     --text-color: #555;
@@ -1033,7 +1033,7 @@ footer .container {
 .title-underline {
   width: 60px;
   height: 3px;
-  background-color: #4b5c09; /* orange accent */
+  background-color: #f25c19; /* orange accent */
   margin-bottom: 25px;
 }
 
@@ -1063,13 +1063,13 @@ footer .container {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #4b5c09;
+  border-color: #F05E23;
   background-color: #fff;
   outline: none;
 }
 
 .submit-btn {
-  background-color: #4b5c09;
+  background-color: #F05E23;
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
@@ -1081,8 +1081,7 @@ footer .container {
 }
 
 .submit-btn:hover {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #F05E23;
 }
 
 /* Info Section */
@@ -1101,7 +1100,7 @@ footer .container {
 }
 
 .info-item i {
-  color: #4b5c09;
+  color: #F05E23;
   font-size: 1.2rem;
   margin-right: 10px;
 }
