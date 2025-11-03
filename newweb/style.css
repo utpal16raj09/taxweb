@@ -737,7 +737,12 @@ footer .container {
     height: 40px;
     margin-bottom: 20px;
 }
-
+@media (max-width: 768px) {
+  .footer-logo {
+    display: block;
+    margin: 0 auto 20px auto; /* centers horizontally */
+  }
+}
 .footer-col h4 {
     color: var(--white-color);
     margin-bottom: 20px;
@@ -1196,4 +1201,5 @@ img {
         padding: 12px;
     }
 }
+
 
