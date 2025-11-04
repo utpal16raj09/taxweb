@@ -17,13 +17,8 @@
             <div class="container">
                 <div class="contact-info">
                     <a href="tel:+14706950605"><i class="fa fa-phone"></i> +1 (470) 695-0605</a>
-                    <a href="mailto:customerservice@llfstax.com"><i class="fa fa-envelope"></i> customerservice@llfstax.com</a>
-                </div>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:customerservice@llfstax.com"><i class="fa fa-envelope"></i>
+                        customerservice@llfstax.com</a>
                 </div>
             </div>
         </div>
@@ -509,7 +504,7 @@
                         <h2 class="contact-title">Request A Call</h2>
                         <div class="title-underline"></div>
 
-                        <form id="contact-form" class="contact-form" onsubmit="return validateForm()">
+                        <form id="contact-form" class="contact-form" onsubmit="return redirectToGmail()">
                             <div class="form-row">
                                 <input type="text" id="name" name="name" placeholder="Your Name *" required>
                                 <input type="email" id="email" name="email" placeholder="Your Mail *" required>
@@ -524,6 +519,34 @@
                         </form>
                     </div>
 
+                    <script>
+                        function redirectToGmail() {
+                            const name = document.getElementById("name").value;
+                            const email = document.getElementById("email").value;
+                            const phone = document.getElementById("phone").value;
+                            const subject = document.getElementById("subject").value || "Contact Request";
+                            const message = document.getElementById("message").value;
+
+                            // Properly formatted body with new lines
+                            const body =
+                                `Name: ${name}
+Email: ${email}
+Phone: ${phone}
+
+Message:
+${message}`;
+
+                            // Encode for Gmail URL
+                            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=customerservice@llfstax.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                            // Open Gmail compose
+                            window.open(gmailUrl, "_blank");
+
+                            return false; // prevent default form submit
+                        }
+                    </script>
+
+
                     <!-- Right: Contact Info -->
                     <div class="contact-info-box">
                         <h2 class="contact-title">Reach Us</h2>
@@ -531,11 +554,11 @@
 
                         <div class="info-item">
                             <i class="fa fa-phone"></i>
-                            <a href="tel:6105084455">610-508-4455</a>
+                            <a href="tel:6105084455">+1 (470) 695-0605</a>
                         </div>
                         <div class="info-item">
                             <i class="fa fa-envelope"></i>
-                            <a href="mailto:support@vtaxfiling.com">customerservice@llfstax.com</a>
+                            <a href="mailto:customerservice@llfstax.com">customerservice@llfstax.com</a>
                         </div>
                         <div class="info-item address">
                             <i class="fa fa-map-marker-alt"></i>
@@ -566,76 +589,71 @@
         </script>
 
 
-<section id="cta" class="cta-section">
-  <div class="container">
-    <h2 class="text-center">File Your Taxes in Just 3 Simple Steps</h2>
-  </div>
-</section>
+        <section id="cta" class="cta-section">
+            <div class="container">
+                <h2 class="text-center">File Your Taxes in Just 3 Simple Steps</h2>
+            </div>
+        </section>
 
     </main>
 
-   <footer>
-  <div class="container">
-    <div class="footer-col footer-about">
-     <img src="images/logo.png" alt="V Tax Filing Logo" style="transform: scale(2.5);" class="footer-logo">
-      <p>Ledger Lab LLC is a firm of U.S. tax and accounting needs. We are one of the leading firms in the area,
-        providing unmatched expertise and service.</p>
-      <div class="footer-contact">
-        <p><i class="fa fa-map-marker-alt"></i> 2390 Huddlestone Way, Cumming, Georgia, 30041</p>
-        <p><i class="fa fa-phone"></i> +1 (470) 695-0605</p>
-        <p><i class="fa fa-envelope"></i> customerservice@llfstax.com</p>
-      </div>
-    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-col footer-about">
+                <img src="images/logo.png" alt="V Tax Filing Logo" style="transform: scale(2.5);" class="footer-logo">
+                <p>Ledger Lab LLC is a firm of U.S. tax and accounting needs. We are one of the leading firms in the
+                    area,
+                    providing unmatched expertise and service.</p>
+                <div class="footer-contact">
+                    <p><i class="fa fa-map-marker-alt"></i> 2390 Huddlestone Way, Cumming, Georgia, 30041</p>
+                    <p><i class="fa fa-phone"></i> +1 (470) 695-0605</p>
+                    <p><i class="fa fa-envelope"></i> customerservice@llfstax.com</p>
+                </div>
+            </div>
 
-    <div class="footer-col footer-links">
-      <h4>Useful Links</h4>
-      <ul>
-        <li><a href="#">Our Vision</a></li>
-        <li><a href="#">Security Strength</a></li>
-        <li><a href="#">Referral Policy</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </div>
+            <div class="footer-col footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">Our Vision</a></li>
+                    <li><a href="#">Security Strength</a></li>
+                    <li><a href="#">Referral Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
 
-    <div class="footer-col footer-services">
-      <h4>Services</h4>
-      <ul id="footer-services" class="footer-services-grid">
-        <li><a href="#services" data-service="tax-planning">Tax Planning (Free)</a></li>
-        <li><a href="#services" data-service="tax-review">Tax Return Review (Free)</a></li>
-        <li><a href="#services" data-service="irs-audit">IRS Audit Representation</a></li>
-        <li><a href="#services" data-service="itin">ITIN Application</a></li>
-        <li><a href="#services" data-service="fbar">FBAR/FATCA Processing</a></li>
-        <li><a href="#services" data-service="business-tax">Business Tax Services</a></li>
-        <li><a href="#services" data-service="payroll">Payroll Services</a></li>
-        <li><a href="#services" data-service="financial-consulting">Financial Consulting</a></li>
-        <li><a href="#services" data-service="investment-planning">Investment Tax Planning</a></li>
-        <li><a href="#services" data-service="estate-tax">Estate & Trust Tax Services</a></li>
-        <li><a href="#services" data-service="remote-filing">Remote Filing Assistance</a></li>
-        <li><a href="#services" data-service="education">Tax Education & Workshops</a></li>
-      </ul>
-    </div>
+            <div class="footer-col footer-services">
+                <h4>Services</h4>
+                <ul id="footer-services" class="footer-services-grid">
+                    <li><a href="#services" data-service="tax-planning">Tax Planning (Free)</a></li>
+                    <li><a href="#services" data-service="tax-review">Tax Return Review (Free)</a></li>
+                    <li><a href="#services" data-service="irs-audit">IRS Audit Representation</a></li>
+                    <li><a href="#services" data-service="itin">ITIN Application</a></li>
+                    <li><a href="#services" data-service="fbar">FBAR/FATCA Processing</a></li>
+                    <li><a href="#services" data-service="business-tax">Business Tax Services</a></li>
+                    <li><a href="#services" data-service="payroll">Payroll Services</a></li>
+                    <li><a href="#services" data-service="financial-consulting">Financial Consulting</a></li>
+                    <li><a href="#services" data-service="investment-planning">Investment Tax Planning</a></li>
+                    <li><a href="#services" data-service="estate-tax">Estate & Trust Tax Services</a></li>
+                    <li><a href="#services" data-service="remote-filing">Remote Filing Assistance</a></li>
+                    <li><a href="#services" data-service="education">Tax Education & Workshops</a></li>
+                </ul>
+            </div>
 
-    <div class="footer-col footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly tax tips and news updates straight to your inbox.</p>
-      <form class="newsletter-form">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i></button>
-      </form>
-    </div>
-  </div>
+            <div class="footer-col footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Get weekly tax tips and news updates straight to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
 
-  <div class="footer-bottom">
-    <p>&copy; 2025 Ledger Lab LLC. All rights reserved.</p>
-    <div class="payment-icons">
-      <i class="fab fa-cc-visa"></i>
-      <i class="fab fa-cc-mastercard"></i>
-      <i class="fab fa-cc-paypal"></i>
-      <i class="fab fa-cc-stripe"></i>
-    </div>
-  </div>
-</footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ledger Lab LLC. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script>
         // Footer service link handler
@@ -667,6 +685,3 @@
 </body>
 
 </html>
-
-
-
