@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const header = document.getElementById('main-header');
-    
+
     // 1. Mobile Menu Toggle
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
@@ -49,7 +49,39 @@ document.addEventListener('DOMContentLoaded', () => {
     faders.forEach(fader => {
         appearOnScroll.observe(fader);
     });
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
 
+    // Check for saved theme preference or default to light
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'yellow') {
+        document.body.classList.add('yellow-theme');
+        themeToggle.checked = true;
+        themeToggleMobile.checked = true;
+    }
+
+    // Sync both toggles
+    function handleThemeToggle(isChecked) {
+        if (isChecked) {
+            document.body.classList.add('yellow-theme');
+            localStorage.setItem('theme', 'yellow');
+        } else {
+            document.body.classList.remove('yellow-theme');
+            localStorage.setItem('theme', 'light');
+        }
+        // Sync both toggles
+        themeToggle.checked = isChecked;
+        themeToggleMobile.checked = isChecked;
+    }
+
+    themeToggle.addEventListener('change', function () {
+        handleThemeToggle(this.checked);
+    });
+
+    themeToggleMobile.addEventListener('change', function () {
+        handleThemeToggle(this.checked);
+    });
     // 4. Sidebar Content Toggle (NEWLY ADDED)
     const sidebarLinks = document.querySelectorAll('.sidebar ul li a');
     const contentPanels = document.querySelectorAll('.main-content .content-panel');
