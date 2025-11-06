@@ -8,10 +8,110 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Theme toggle styles */
+        .theme-toggle-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 15px;
+        }
+
+        .theme-toggle-label {
+            margin-right: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .theme-toggle {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+
+        .theme-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .theme-toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .theme-toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.theme-toggle-slider {
+            background-color: #ffc107;
+        }
+
+        input:checked+.theme-toggle-slider:before {
+            transform: translateX(30px);
+        }
+
+        /* Yellow theme styles */
+        body.yellow-theme {
+            background-color: #fffef5;
+        }
+
+        body.yellow-theme .main-nav,
+        body.yellow-theme .top-bar {
+            background-color: #fff9e6;
+        }
+
+        body.yellow-theme .content-section,
+        body.yellow-theme .contact-section,
+        body.yellow-theme .cta-section {
+            background-color: #fffef5;
+        }
+
+        body.yellow-theme .bg-light {
+            background-color: #fff9e6 !important;
+        }
+
+        body.yellow-theme .service-card,
+        body.yellow-theme .step-card {
+            background-color: #fffef5;
+            border: 1px solid #ffecb3;
+        }
+
+        body.yellow-theme .content-panel,
+        body.yellow-theme .contact-form-box,
+        body.yellow-theme .contact-info-box {
+            background-color: #fffef5;
+            border: 1px solid #ffecb3;
+        }
+
+        body.yellow-theme footer {
+            background-color: #fff9e6;
+        }
+
+        body.yellow-theme .footer-bottom {
+            background-color: #ffecb3;
+        }
+    </style>
 </head>
 
 <body>
-
     <header id="main-header">
         <div class="top-bar">
             <div class="container">
@@ -20,12 +120,21 @@
                     <a href="mailto:customerservice@llfstax.com"><i class="fa fa-envelope"></i>
                         customerservice@llfstax.com</a>
                 </div>
+                <!-- Desktop Theme Toggle -->
+                <div class="theme-toggle-container desktop-toggle">
+                    <span class="theme-toggle-label">Monolithic</span>
+                    <label class="theme-toggle">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="theme-toggle-slider"></span>
+                    </label>
+                    <span class="theme-toggle-label">Moonlight</span>
+                </div>
             </div>
         </div>
         <nav class="main-nav">
             <div class="container">
                 <a href="#" class="nav-logo">
-                    <img src="images/logo.png" alt="V  Filing Logo" style="transform: scale(2);">
+                    <img src="images/logo.png" alt="V Filing Logo" style="transform: scale(2);">
                 </a>
                 <ul class="nav-menu">
                     <li><a href="#hero" class="nav-link active">Home</a></li>
@@ -33,6 +142,17 @@
                     <li><a href="#services" class="nav-link">Services</a></li>
                     <li><a href="#values-content" class="nav-link">About Us</a></li>
                     <li><a href="#contact" class="nav-link">Contact Us</a></li>
+                    <!-- Mobile Theme Toggle -->
+                    <li class="mobile-theme-toggle">
+                        <div class="theme-toggle-container mobile-toggle">
+                            <span class="theme-toggle-label">Monolithic</span>
+                            <label class="theme-toggle">
+                                <input type="checkbox" id="theme-toggle-mobile">
+                                <span class="theme-toggle-slider"></span>
+                            </label>
+                            <span class="theme-toggle-label">Moonlight</span>
+                        </div>
+                    </li>
                 </ul>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -83,10 +203,10 @@
                                 <p>At the core of our firm lies a deep commitment to professionalism. Every client
                                     engagement is handled with the utmost integrity, confidentiality, and accuracy. We
                                     understand that our reputation depends on how well we deliver consistent,
-                                    high-quality results, and that’s why we invest in the continuous growth of our
-                                    team’s skills and expertise.</p>
+                                    high-quality results, and that's why we invest in the continuous growth of our
+                                    team's skills and expertise.</p>
                                 <p>Our professionals are trained to anticipate challenges, uphold ethical standards, and
-                                    represent our clients’ interests with dedication and respect. Whether you’re an
+                                    represent our clients' interests with dedication and respect. Whether you're an
                                     individual, a small business, or a large enterprise, our professional approach
                                     ensures you always receive precise, reliable, and timely service.</p>
                             </article>
@@ -94,19 +214,19 @@
                             <article class="value-item">
                                 <h3><i class="fa fa-comments"></i> Responsiveness</h3>
                                 <p>We believe that time is the most valuable resource for both our clients and our team.
-                                    That’s why responsiveness is one of our defining values. We ensure that every
+                                    That's why responsiveness is one of our defining values. We ensure that every
                                     inquiry, request, and concern is addressed swiftly, professionally, and effectively.
                                 </p>
                                 <p>Our experts stay connected through modern communication channels, ensuring quick
                                     turnaround times and accurate updates. Whether you need urgent financial guidance,
                                     tax clarification, or business consultation, our responsive team is always ready to
-                                    assist — because your success can’t wait.</p>
+                                    assist — because your success can't wait.</p>
                             </article>
 
                             <article class="value-item">
                                 <h3><i class="fa fa-star"></i> Quality</h3>
-                                <p>Quality is not just a metric for us — it’s a mindset. We go beyond compliance and
-                                    routine to provide solutions that genuinely add value to our clients’ financial
+                                <p>Quality is not just a metric for us — it's a mindset. We go beyond compliance and
+                                    routine to provide solutions that genuinely add value to our clients' financial
                                     success. Every report, every analysis, and every consultation goes through rigorous
                                     quality checks to ensure accuracy and insight.</p>
                                 <p>Our clients trust us because we hold ourselves to the highest professional and
@@ -195,7 +315,7 @@
                     <div class="step-card fade-in">
                         <div class="step-icon"><i class="fa fa-info-circle"></i></div>
                         <h3>2. Share Your Details</h3>
-                        <p>Tell us a bit about your financial situation — we’ll guide you through the next steps with
+                        <p>Tell us a bit about your financial situation — we'll guide you through the next steps with
                             personalized assistance and document guidance.</p>
                     </div>
 
@@ -582,7 +702,7 @@ ${message}`;
                     return false;
                 }
 
-                alert("Thank you for contacting Ledger Labs LLC! We’ll reach out shortly.");
+                alert("Thank you for contacting Ledger Labs LLC! We'll reach out shortly.");
                 document.getElementById("contact-form").reset();
                 return false; // Prevent actual submission for now
             }
@@ -678,8 +798,27 @@ ${message}`;
                 detailContent.innerHTML = `<h3>${info.title}</h3>${info.content}`;
             });
         });
-    </script>
 
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+
+        // Check for saved theme preference or default to light
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'yellow') {
+            document.body.classList.add('yellow-theme');
+            themeToggle.checked = true;
+        }
+
+        themeToggle.addEventListener('change', function () {
+            if (this.checked) {
+                document.body.classList.add('yellow-theme');
+                localStorage.setItem('theme', 'yellow');
+            } else {
+                document.body.classList.remove('yellow-theme');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
